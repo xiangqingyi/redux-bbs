@@ -134,6 +134,7 @@ const convertPostsToPlain = posts => {
   let postsIds = [];
   let authorsById = {};
   posts.forEach(item => {
+    console.log(item);
     postsById[item.id] = { ...item, author: item.author.id };
     postsIds.push(item.id);
     if (!authorsById[item.author.id]) {
